@@ -36,7 +36,7 @@ jobs:
       #    with:
       #      node-version: "16.x"
 
-
+      - run: npm ci
       - uses: jfrog/frogbot@b92e53d9631139a697cb71d9e70229a70ca56694
         env:
           # [Mandatory]
