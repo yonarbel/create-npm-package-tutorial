@@ -37,9 +37,6 @@ jobs:
       #      node-version: "16.x"
       - uses: jfrog/frogbot@b92e53d9631139a697cb71d9e70229a70ca56694
       - uses: jfrog/setup-jfrog-cli@v3
-      - run: | 
-         jf rt ping
-         jf npm ci
         env:
           # [Mandatory]
           # JFrog platform URL (This functionality requires version 3.29.0 or above of Xray)
@@ -56,3 +53,8 @@ jobs:
           # [Mandatory if using npm]
           # The command that installs the dependencies
           # JF_INSTALL_DEPS_CMD: "npm i"
+
+      - run: | 
+         jf rt ping
+         jf npm ci
+        
