@@ -35,6 +35,7 @@ jobs:
       # - uses: actions/setup-node@v3
       #    with:
       #      node-version: "16.x"
+      - uses: actions/setup-node@v3.5.1
       - uses: jfrog/setup-jfrog-cli@v3
         env:
           JF_ENV_1: ${{ secrets.JF_SECRET_ENV }}
