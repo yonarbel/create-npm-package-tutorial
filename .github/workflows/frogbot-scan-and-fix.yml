@@ -35,7 +35,10 @@ jobs:
       # - uses: actions/setup-node@v3
       #    with:
       #      node-version: "16.x"
-        
+      - uses: jfrog/setup-jfrog-cli@v3
+        env:
+          JF_ENV_1: ${{ secrets.JF_SECRET_ENV }}
+      - run: jf npm ci
       - uses: jfrog/frogbot@b92e53d9631139a697cb71d9e70229a70ca56694
         env:
           # [Mandatory]
@@ -47,11 +50,6 @@ jobs:
           # [Mandatory]
           # The GitHub token automatically generated for the job
           JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: jf npm ci
-      - uses: jfrog/setup-jfrog-cli@v3
-        env:
-          JF_ENV_1: ${{ secrets.JF_SECRET_ENV }}
-        
           # [Mandatory if using npm]
           # The command that installs the dependencies
           # JF_INSTALL_DEPS_CMD: "npm i"
