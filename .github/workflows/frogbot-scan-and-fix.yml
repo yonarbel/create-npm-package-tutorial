@@ -42,7 +42,6 @@ jobs:
           # JFrog platform URL (This functionality requires version 3.29.0 or above of Xray)
           JF_URL: ${{ secrets.FROGBOT_URL }}
           JF_ENV_1: ${{ secrets.JF_SECRET_ENV }}
-          # [Mandatory if JF_USER and JF_PASSWORD are not provided]
           # JFrog access token with 'read' permissions on Xray service
           JF_ACCESS_TOKEN: ${{ secrets.FROGBOT_ACCESS_TOKEN }}
 
@@ -53,8 +52,3 @@ jobs:
           # [Mandatory if using npm]
           # The command that installs the dependencies
           # JF_INSTALL_DEPS_CMD: "npm i"
-
-      - run: | 
-         jf rt ping
-         jf npm ci
-        
