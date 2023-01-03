@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/yonarbel/create-package-example#readme",
   "dependencies": {
+    "axios": "^0.21.2",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
