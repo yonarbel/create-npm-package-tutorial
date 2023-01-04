@@ -26,7 +26,7 @@ jobs:
         env:
           JF_ENV_1: ${{ secrets.JF_SECRET_ENV }}
       - run: ls && pwd && jf npm ci
-      - uses: jfrog/frogbot@b92e53d9631139a697cb71d9e70229a70ca56694
+      - uses: jfrog/frogbot@v2
         env:
           # [Mandatory]
           # JFrog platform URL (This functionality requires version 3.29.0 or above of Xray)
